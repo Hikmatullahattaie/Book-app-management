@@ -103,3 +103,9 @@ function attachEditDeleteEvents() {
         loadBooks();
     });
 }
+
+// خواندن کتابها از Local Storage
+function getBooks() {
+    const books = localStorage.getItem('books');
+    return books ? JSON.parse(books) : [];
+}
