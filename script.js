@@ -93,3 +93,13 @@ function attachEditDeleteEvents() {
             loadBooks();
         }
     });
+    $('.delete').click(function () {
+        const index = $(this).data('index');
+        const books = getBooks();
+
+
+        books.splice(index, 1);
+        saveBooks(books);
+        loadBooks();
+    });
+}
