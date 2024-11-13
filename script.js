@@ -49,3 +49,29 @@ $(document).ready(function () {
   
      
   });
+
+  // بارگذاری کتابها
+function loadBooks(searchTerm = '') {
+    const books = getBooks();
+    $('#bookList').empty();
+
+    books.forEach((book, index) => {
+
+        if (book.name.toLowerCase().includes(searchTerm)) {
+            $('#bookList').append(
+                ` 
+             <tr class="">
+                    <td>  ${book.name}</td>
+                    <td> ${book.description}</td>
+                    <td>(${book.date})</td>
+                    <td><button class="edit input  mt-3 btn btn-outline-success" id = "dd" data-index="${index}"><i class="bi bi-credit-card" ></i></button>
+                        <button class="delete input  mt-3 btn btn-outline-success" data-index="${index}"> <i class="bi bi-trash" id = "cc"></i></button>
+                        </td>
+                    </tr> 
+                `
+            );
+        }
+    });
+
+    attachEditDeleteEvents();
+}
