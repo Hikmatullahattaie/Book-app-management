@@ -109,3 +109,7 @@ function getBooks() {
     const books = localStorage.getItem('books');
     return books ? JSON.parse(books) : [];
 }
+// ذخیره کتابها در Local Storage
+function saveBooks(books) {
+    localStorage.setItem('books', JSON.stringify(books));
+}
