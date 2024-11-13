@@ -113,3 +113,10 @@ function getBooks() {
 function saveBooks(books) {
     localStorage.setItem('books', JSON.stringify(books));
 }
+// پاک کردن ورودیها
+function clearInputs() {
+    $('#bookName').val('');
+    $('#bookDescription').val('');
+
+    $('#bookDate').val('');
+}
