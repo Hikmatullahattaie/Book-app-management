@@ -47,6 +47,7 @@ $(document).ready(function () {
 function loadBooks(searchTerm = '') {
     const books = getBooks();
     $('#bookList').empty();
+    $(".toast").hide()
 
     books.forEach((book, index) => {
 
@@ -117,4 +118,5 @@ function clearInputs() {
     $('#bookDescription').val('');
 
     $('#bookDate').val('');
+   
 }
