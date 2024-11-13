@@ -75,3 +75,21 @@ function loadBooks(searchTerm = '') {
 
     attachEditDeleteEvents();
 }
+
+// اتصال رویدادهای ویرایش و حذف
+
+function attachEditDeleteEvents() {
+    $('.edit').click(function () {
+        const index = $(this).data('index');
+        const books = getBooks();
+
+        const newName = prompt("ویرایش نام کتاب:", books[index].name);
+        const newDescription = prompt("ویرایش توضیحات کتاب:", books[index].description);
+        const newDate = prompt("ویرایش تاریخ کتاب:", books[index].date);
+
+        if (newName && newDescription && newDate) {
+            books[index] = { name: newName, description: newDescription, date: newDate };
+            saveBooks(books);
+            loadBooks();
+        }
+    });
