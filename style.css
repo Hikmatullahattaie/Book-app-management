@@ -13,4 +13,12 @@ table{
     border: 1px solid rgb(84, 196, 240);
     border-collapse: collapse;
  }
+ .toast{
+    margin: auto;
+ }
+ .scrool{
+    max-height:400px ;
+    overflow: scroll;
+
+ }
 
