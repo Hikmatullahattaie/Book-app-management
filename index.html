@@ -35,6 +35,71 @@
 
 
     </nav>
+    <section class="bg-light ">
+        <div class="container ">
+            <h1 class="lead display-6 text-center bg-dark text-light p-3">مدیریت کتاب</h1>
+            <div class="row">
+            <div class="col-md-6">
+                
+                <input type="text" id="bookName" class="input  form-control mt-3" placeholder="نام کتاب">
+                <input type="text" id="bookDescription" class="input  form-control mt-3" placeholder="توضیحات کتاب">
+                <input type="date" id="bookDate" class="input  form-control mt-3">
+                <button id="addBook" class="input form-control mt-3 btn btn-outline-success" >افزودن کتاب</button>
+    
+               
+            </div>
+    
+    
+            <div class="col-md-6  ">
+                <input type="text" id="searchBook" class="input  form-control mt-3 mb-3" placeholder="...جستجوی کتاب">
+               
+                    <div class="scrool">
+               <div class="table-responsive">
+    
+                <table class="table table-primary">
+                    <thead>
+                        <tr class="">
+                            <th>BookName</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookList">
+    
+                    </tbody>
+                </table>
+    
+               </div>
+            </div>
+               
+            </div>
+        </div>
+    
+        <!-- <div class="alert alert-info alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>هشدار!</strong> لطفا فورم را پر کنید
+          </div> -->
+    
+    
+    
+    
+          <div class="toast">
+            <div class="toast-header">
+              <strong class="me-auto"> .</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+              <p>لطفا فورم را پر کنید</p>
+            </div>
+          </div>
+    
+          <audio id="fadd" src="music/fadd.mp3"></audio>
+          <audio id="add" src="music/add.mp3"></audio>
+          <audio id="edit" src="music/edit.mp3"></audio>
+          <audio id="delete" src="music/delete.mp3"></audio>
+        </div>
+       </section>
     
 </body>
 </html>
