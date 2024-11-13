@@ -30,6 +30,22 @@ $(document).ready(function () {
             $(".toast").show()
         }
     });
+
+     // جستجوی کتاب
+     $('#searchBook').on('input', function () {
+        const searchTerm = $(this).val().toLowerCase();
+        loadBooks(searchTerm);
+    });
+    $("#dd").click(function(){
+        const song = $("#edit")[0];
+        song.play();
+      
+      });
+      $("#cc").click(function(){
+        const song = $("#delete")[0];
+        song.play();
+      
+      });
   
      
   });
