@@ -2,11 +2,7 @@ $(document).ready(function () {
     $(".btn-close").click(function(){
       $(".toast").hide()
     })
-    $("#addBook").click(function(){
-      const song = $("#add")[0];
-      song.play();
-  
-    });
+   
   
       loadBooks();
   
@@ -23,12 +19,18 @@ $(document).ready(function () {
             saveBooks(books);
             loadBooks();
             clearInputs();
+                const song = $("#add")[0];
+                song.play();
         } else {
             // alert('لطفاً تمام فیلدها را پر کنید.');
-            var song = $("#fadd")[0]
-            song.play()
+
+                const song = $("#fadd")[0]
+                song.play()
+            
+            
             $(".toast").show()
         }
+       
     });
 
      // جستجوی کتاب
@@ -36,16 +38,7 @@ $(document).ready(function () {
         const searchTerm = $(this).val().toLowerCase();
         loadBooks(searchTerm);
     });
-    $("#dd").click(function(){
-        const song = $("#edit")[0];
-        song.play();
-      
-      });
-      $("#cc").click(function(){
-        const song = $("#delete")[0];
-        song.play();
-      
-      });
+  
   
      
   });
@@ -91,6 +84,8 @@ function attachEditDeleteEvents() {
             books[index] = { name: newName, description: newDescription, date: newDate };
             saveBooks(books);
             loadBooks();
+            const song = $("#edit")[0];
+            song.play();
         }
     });
     $('.delete').click(function () {
@@ -101,6 +96,9 @@ function attachEditDeleteEvents() {
         books.splice(index, 1);
         saveBooks(books);
         loadBooks();
+        const song = $("#delete")[0];
+        song.play();
+        
     });
 }
 
